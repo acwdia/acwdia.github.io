@@ -28,3 +28,14 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.footer--dark {
+  --ifm-footer-background-color: #f0f0f0;
+  --ifm-footer-color: #111;
+  --ifm-footer-link-color: #111;
+  --ifm-footer-title-color: #111;
+}
+
+.footer--dark a {
+  text-decoration: underline;
+}
