@@ -1,0 +1,106 @@
+# Array Manipulation
+
+<div class="video">
+  <div class="video-container">
+    <iframe
+      width="560"
+      height="315"
+      src="https://v2.scrimba.com/s0t822"
+      frameborder="0"
+      allow="encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+</div>
+
+Once an array has been defined, it often becomes necessary to manipulate that array by adding, removing, and arranging the items of the array. Fortunately, JavaScript provides many methods for manipulating arrays.
+
+> #### NOTE
+> **ALL** of the following methods will alter the original array.
+
+## The push() Method
+
+The [`push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) method adds one or more items to the **end** of an array and returns the new length of the array. 
+
+```js
+const groceries = ['Apples', 'Milk']
+
+console.log(groceries.push('Bread')) // 3
+console.log(groceries) // ['Apples', 'Milk', 'Bread']
+
+
+groceries.push('Yogurt', 'Bananas')
+
+console.log(groceries)
+// ['Apples', 'Milk', 'Bread', 'Yogurt', 'Bananas']
+```
+
+## The pop() Method
+
+The [`pop()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) method removes the **last** item from an array and returns the item removed. 
+
+```js
+const groceries = ['Apples', 'Milk', 'Bread']
+
+console.log(groceries.pop()) // Bread
+console.log(groceries) // ['Apples', 'Milk']
+```
+
+## The shift() Method
+
+The [`shift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) method removes the **first** item from an array and returns the item removed. 
+
+```js
+const groceries = ['Apples', 'Milk', 'Bread']
+
+console.log(groceries.shift()) // Apples
+console.log(groceries) // ['Milk', 'Bread']
+```
+
+## The unshift() Method
+
+The [`unshift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) method adds one or more items to the **beginning** of an array and returns the new length of the array.
+
+```js
+const groceries = ['Apples', 'Milk']
+
+console.log(groceries.unshift('Bread')) // 3
+console.log(groceries) // ['Bread', 'Apples', 'Milk']
+
+
+groceries.unshift('Yogurt', 'Bananas')
+
+console.log(groceries)
+// ['Yogurt', 'Bananas', 'Bread', 'Apples', 'Milk']
+```
+
+
+## The splice() Method
+
+The [`splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) method adds, removes, and/or replaces items anywhere in the array, not just at the beginning or end. This method can take three parameters, `start` (the index of where to start), `deleteCount` (the number of items to remove from the array), and `items` (the item or items to add to the array)
+
+```js
+const groceries = ['Apples', 'Milk', 'Bread']
+
+// Insert item at index 1
+groceries.splice(1, 0, 'Yogurt')
+
+console.log(groceries) // ['Apples', 'Yogurt', 'Milk', 'Bread']
+
+// Removes item at index 2
+groceries.splice(2, 1)
+
+console.log(groceries) // ['Apples', 'Yogurt', 'Bread']
+
+// Removes the first two items, Inserts a new item. 
+groceries.splice(0, 2, 'Carrots')
+
+console.log(groceries) // ['Carrots', 'Bread']
+```
+
+> #### NOTE
+> The [`toSpliced()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced) method is a copying version of the `splice()` method. It returns a new array without affecting the original. 
+
+## See Also
+
+- [Manipulating and Sorting Arrays in JavaScript](https://www.youtube.com/watch?v=C3EPTuXKRw0)

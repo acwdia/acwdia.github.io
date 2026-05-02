@@ -1,0 +1,133 @@
+# Fetch
+
+<div class="video">
+  <div class="video-container">
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/FmpMIaukgfA?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+  </div>
+  <p>
+    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
+  </p>
+</div> 
+
+
+The [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) is a replacement for the older [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) and can be used to make Ajax requests. With a fetch request, the Fetch API will return a response in the form of a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/API/Promise).
+
+## Basic Fetch Request
+In many cases, the basic fetch request, relying on the default setting, can be sufficient. The following example is a basic fetch request that returns JSON data. 
+
+```js
+fetch('https://jsonplaceholder.typicode.com/users/1')
+      .then(response => response.json())
+      .then(json => document.write(JSON.stringify(json)))
+```
+
+<iframe height="228" style="width: 100%;" scrolling="no" title="Fetch - Basic Request" src="https://codepen.io/IMD/embed/jOWqVNM?height=228&theme-id=47863&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/IMD/pen/jOWqVNM'>Fetch - Basic Request</a> by IMD
+  (<a href='https://codepen.io/IMD'>@IMD</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+## Using Async and Await
+
+An [`async`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) function, in conjunction with the `await` keyword, enables asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need for chaining. Async functions can provide an alternative syntax for working with the `fetch`. 
+
+```js
+(async function fetchData () {
+  const response = await fetch('https://jsonplaceholder.typicode.com/users/1')
+  const json = await response.json()
+  document.write(JSON.stringify(json))
+})()
+```
+
+<iframe height="220" style="width: 100%;" scrolling="no" title="Fetch with Async and Await" src="https://codepen.io/IMD/embed/ExgxKbm?height=220&theme-id=47863&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/IMD/pen/ExgxKbm'>Fetch with Async and Await</a> by IMD
+  (<a href='https://codepen.io/IMD'>@IMD</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+## Adding a Request Object
+When making a simple GET request the basic Fetch syntax will suffice. However, when making other requests, like POST or PUT, or when sending a body, a request object must be provided. This is also crucial when consuming a full CRUD API. 
+
+### Setting a Method
+By default, Fetch makes a GET request, but you can set other methods using the `method` option.
+
+```js
+const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  ...
+})
+```
+
+### Setting a Body
+The request body contains the content the client is sending to the server. The body is typically sent for POST an PUT request. When working with an API, the body is typically sent as a JSON string. The `JSON.stringify` can be used to convert a standard JavaScript object. 
+
+```js
+const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify({ title: 'foo', body: 'bar', userId: 1 })
+  ...
+})
+```
+
+### Setting Headers
+
+Request headers give the server information about the request: for example, the `Content-Type` header tells the server the format of the request's body. The headers can also contain authentication information, such as Bearer tokens.
+
+```js
+const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+  headers: {
+    'Authorization': `Bearer ${token}`,
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  }
+})
+```
+
+### A Full Example
+Below is an example of a full POST request using Fetch with the request object.
+
+```js
+(async function createPost () {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({ title: 'foo', body: 'bar', userId: 1 }),
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    }
+  })
+  const json = await response.json()
+  console.log(json)
+})()
+```
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="POST Request with Fetch" src="https://codepen.io/IMD/embed/xxoVJgj?default-tab=html%2Cresult&theme-id=47863" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/IMD/pen/xxoVJgj">
+  POST Request with Fetch</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+## Handling Errors
+Errors can occur for multiple reasons when making a fetch request, including network errors, invalid responses, etc. For a fetch request using the `then` statement, the `catch` statement should be used. 
+
+```js
+fetch('https://jsonplaceholder.typicode.com/users/1')
+      .then(response => response.json())
+      .then(json => document.write(JSON.stringify(json)))
+      .catch(error => console.log('Fetch failed:', error))
+```
+
+When using `async/await`, a `try/catch` block can be used. 
+
+```js
+(async function fetchData () {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users/1')
+    const json = await response.json()
+    document.write(JSON.stringify(json))
+  } catch (error) {
+    console.log('Fetch failed:', error)
+  }
+})()
+```
+
+
+
