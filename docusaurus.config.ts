@@ -59,6 +59,7 @@ const config: Config = {
           path: 'courses',
           routeBasePath: 'courses',
           sidebarPath: './sidebars.ts',
+          breadcrumbs: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
