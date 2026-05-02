@@ -12,12 +12,7 @@
     ></iframe>
   </div>
   <p>
-    <small>
-      This Scrimba screencast was created by
-      <a
-        href="https://scrimba.com/@PizzaPokerGuy"
-      >Dylan C. Israel</a>.
-    </small>
+    <small>This Scrimba screencast was created by <a href="https://scrimba.com/@PizzaPokerGuy">Dylan C. Israel</a>. </small>
   </p>
 </div>
 
