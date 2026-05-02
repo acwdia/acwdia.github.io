@@ -1,0 +1,298 @@
+---
+title: Conditional Statements
+---
+
+# Conditional Statements
+
+Conditional statements control the flow of a program by executing code only when certain conditions are met. Therefore, they are a fundamental part of the control flow of a program. 
+
+The [control flow](https://developer.mozilla.org/en-US/docs/Glossary/Control_flow) is the order in which a computer executes statements in a script. __When code is run, each statement is executed from top to bottom, *unless there are statements that alter the control flow, like conditionals statements or loops.*__ 
+
+In JavaScript, there are two types of conditional statements, the [`if...else`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement and the [`switch`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) statement. 
+
+## if...else
+
+<div className="video">
+  <div className="video-container">
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/c83OjxNSPos?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+  </div>
+  <p>
+    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
+  </p>
+</div> 
+
+### The if statement
+
+The [`if` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) is the most basic conditional statement in JavaScript. It executes a block of code only if a specified condition is [truthy](https://developer.mozilla.org/en-US/docs/Glossary/truthy). 
+
+The `if` statement is made up of a `condition` and a `statement`. The `condition` is an expression that will be evaluated to be `truthy` or `falsy`. The `condition` is placed between parentheses following the `if` keyword.  The `statement` is the block of code within the curly braces, which will be executed if the `condition` is `truthy`.
+
+```js
+
+/* 
+Imagine you are building a site for an e-commerce shop, and 
+you need to apply certain discounts based on the user's produuct 
+total. We can use conditional statements to calculate the 
+cart total.
+
+Conditions:
+  - If the product total is greater than or equal to $50, 
+    apply free shipping
+*/
+
+/*
+Step 1: Define variables
+  - productTotal may be reassigned later, so we use the let declaration
+  - shippingFee is always the same, so we use the const declaration
+*/
+let productTotal = 55
+const shippingFee = 15
+let cartTotal
+let discount = 0.05 * productTotal
+
+cartTotal = productTotal + shippingFee
+
+// Step 2: Check if product total >= 50, if so, apply free shipping
+
+if (productTotal >= 50) {
+  // If product total >= 50, remove shipping fee, and do not apply discount
+  cartTotal = productTotal
+  console.log(cartTotal)
+  // will log 55
+}
+
+
+```
+
+### The else statement
+
+The second part of the `if...else`, is the `else` statement. This optional statement will execute its block of code only if the `condition`, from the previous `if` statement is `falsy`. While it is possible to have an `if` statement without an `else` statement, the reverse is not possible.
+
+```js
+/* 
+Continuing the example above, if the productTotal is greater 
+than or equal to $50 (if the above condition is truthy), then we must remove shipping fees.
+
+Note that we changed the productTotal to $30
+*/
+productTotal = 30
+
+if (productTotal >= 50) 
+{
+  cartTotal = productTotal
+  console.log(cartTotal)
+} 
+else 
+{
+  cartTotal
+  console.log(cartTotal)
+  // will log 45
+}
+
+```
+
+### The else if clause
+
+When checking for multiple conditions, `if...else` statements can be nested to create an `else if` clause. Each condition will be checked only if the previous condition was `falsy`. 
+
+> #### NOTE
+> There is no `elseif` keyword in JavaScript. The use of `elseif` in place of `else if` will result in a syntax error.
+
+
+```js
+/* 
+Continuing the example above, on top of the previous condition, 
+if productTotal is greater than or equal to $100, we must 
+remove shipping fees AND apply a 5% discount
+
+Note that we changed the productTotal to $200
+*/
+
+productTotal = 200
+discount = 0.05 * productTotal
+
+if (productTotal >= 100) 
+{
+  cartTotal = productTotal - shippingFee - discount
+  console.log(cartTotal)
+  // will log 190 (200 - 5% of $200)
+} 
+else if (productTotal >= 50)
+{
+  cartTotal = productTotal
+  console.log(cartTotal)
+} 
+else
+{
+  cartTotal
+  console.log(cartTotal)
+}
+```
+
+Because an `else if` condition is only evaluated when the previous condition is `falsy`, using the `else if` clause can ensure that only one block of code is executed, which may not be possible when just using `if` statements. 
+
+**Using if statements only**
+```js
+  // Note that our productTotal is still $200.
+
+if (productTotal >= 100) 
+{
+  // this block of code will execute
+  cartTotal = productTotal - discount
+  console.log(cartTotal)
+  
+} 
+
+if (productTotal >= 50)
+{
+  // this block of code will also execute
+  cartTotal = cartTotal - shippingFee
+  console.log(cartTotal)
+} 
+```
+
+## switch
+
+<div className="video">
+  <div className="video-container">
+    <iframe width="640" height="360" src="https://www.youtube.com/embed/I5YlFbIFKGE?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+  </div>
+  <p>
+    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
+  </p>
+</div> 
+
+### The switch statement
+
+The [`switch` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) is similar to the `if...else` statement, but instead of evaluating a condition, the `switch` statement contains different cases.  Each `case` is evaluated to see if it matches the provided expression. A `case` will only match the expression if the case has the exactly same values using the strict comparison (`===`) operator. If a case does match the expression, the associated block of code will be executed. 
+
+A `break` statement is used to tell the program to jump out of the `switch` statement and ignore the remaining cases. If a `break` statement is not used, then fall through will occur.
+
+```js
+
+/* Let's do the same thing we were doing in the if...else examples using a switch statement.
+With this new statement, we can include all the conditions in the same block of code.
+*/
+
+let productTotal = 30
+const shippingFee = 15
+let cartTotal
+let discount = 0.05 * productTotal
+
+switch (true) {
+  case productTotal < 50:
+    // this block of code will execute
+    cartTotal = productTotal + shippingFee
+    console.log('Cart Total is ' + cartTotal)
+    break
+  case productTotal >= 50:
+    // this block of code will NOT execute
+    cartTotal = productTotal
+    console.log('Cart Total is ' + cartTotal)
+    break
+  case productTotal >= 100:
+    // this block of code will NOT execute
+    cartTotal = productTotal - discount
+    console.log('Cart Total is ' + cartTotal)
+}
+```
+> #### NOTE
+> The `expression` for this`switch` statement is set to `true` because we are checking if each of these cases are `true` or `false`. See below for a generic `switch` statement syntax.
+
+```js
+const answer = 'A'
+
+switch(answer)
+{
+  case 'A':
+    // This block of code WILL execute
+    console.log('A is the correct answer.')
+    break
+  case 'B': 
+    // This block of code will NOT execute
+    console.log('B is the wrong answer.')
+    break
+  case 'C': 
+    // This block of code will NOT execute
+    console.log('C is the wrong answer.')
+}
+```
+
+### The break statement
+
+In most cases, it is necessary to include a `break` at the end of a `case`. If a `break` statement is not used then fall-through will occur and all remaining cases will executed. This is because once a `switch` encounters a matching `case` all remaining cases are also considered matches.
+
+```js
+// Note that productTotal is $30
+switch (true) {
+  case productTotal < 50:
+    // this block of code will execute
+    cartTotal = productTotal + shippingFee
+    console.log('Cart Total is ' + cartTotal)
+    break
+  case productTotal >= 50:
+    // this block of code will ALSO execute
+    cartTotal = productTotal
+    console.log('Cart Total is ' + cartTotal)
+    break
+  case productTotal >= 100:
+    // this block of code will ALSO execute
+    cartTotal = productTotal - discount
+    console.log('Cart Total is ' + cartTotal)
+}
+```
+> #### NOTE
+> There is no need to add a `break` at the end of the last case because the `switch` statement will stop executing anyway
+
+
+When used properly, fall-through can be used to make the code more efficient, by stacking cases together. 
+
+```js
+/* Our e-commerce example does not work in this case, so below is a generic example: */
+
+const answer = 'C'
+
+switch (answer) {
+  case 'A':
+  case 'B':
+    // this block of code will execute
+    console.log('This is the wrong answer')
+    break
+  case 'C':
+    // this block of code will NOT execute
+    console.log('This is the correct answer')
+    break
+}
+```
+
+### The default clause
+
+The `default` clause, similar to the `else` statement, is used to provide a default statement if no matching `case` is found. 
+
+> #### NOTE
+> It is best practice to set the `default` clause as the last clause in a switch statement.
+
+
+```js
+// Note that productTotal is $30
+switch (true) {
+  
+  case productTotal >= 50:
+    // this block of code will NOT execute
+    cartTotal = productTotal
+    console.log('Cart Total is ' + cartTotal)
+    break
+
+  case productTotal >= 100:
+    // this block of code will NOT execute
+    cartTotal = productTotal - discount
+    console.log('Cart Total is ' + cartTotal)
+    break
+
+  default:
+    // this block of code will execute
+    cartTotal = productTotal + shippingFee
+    console.log('Cart Total is ' + cartTotal)
+
+}
+```
