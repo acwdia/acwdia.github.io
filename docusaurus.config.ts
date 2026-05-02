@@ -99,102 +99,97 @@ const config: Config = {
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'cst8117Sidebar',
-          position: 'left',
-          label: 'CST8117',
-          title: 'Cross-Platform Web Design',
-          level: 1
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cst8209Sidebar',
-          position: 'left',
-          label: 'CST8209',
-          title: 'Web Programming I',
-          level: 1
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cst8279Sidebar',
-          position: 'left',
-          label: 'CST8279',
-          title: 'Introduction to Computer Programming using Python',
-          level: 1
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cst8260Sidebar',
-          position: 'left',
-          label: 'CST8260',
-          title: 'Database System and Concepts',
-          level: 1
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cst8250Sidebar',
-          position: 'left',
-          label: 'CST8250',
-          title: 'Database Design and Administration',
-          level: 2
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cst8253Sidebar',
-          position: 'left',
-          label: 'CST8253',
-          title: 'Web Programming II',
-          level: 2
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cst8254Sidebar',
-          position: 'left',
-          label: 'CST8254',
-          title: 'Network Operating Systems',
-          level: 2
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cst8318Sidebar',
-          position: 'left',
-          label: 'CST8318',
-          title: 'Graphics Technologies',
-          level: 2
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cst8256Sidebar',
-          position: 'left',
-          label: 'CST8256',
-          title: 'Web Programming Languages I',
-          level: 3
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cst8257Sidebar',
-          position: 'left',
-          label: 'CST8257',
-          title: 'Web Applications Development',
-          level: 3
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cst8259Sidebar',
-          position: 'left',
-          label: 'CST8259',
-          title: 'Web Programming Languages II',
-          level: 4
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'cst8265Sidebar',
-          position: 'left',
-          label: 'CST8265',
-          title: 'Web Security Basics',
-          level: 4
-        },
-      ],
+          type: 'dropdown',
+          label: 'Courses',
+          position: 'right', 
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8117Sidebar',
+              label: 'CST8117',
+              title: 'Cross-Platform Web Design',
+              level: 1
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8209Sidebar',
+              label: 'CST8209',
+              title: 'Web Programming I',
+              level: 1
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8250Sidebar',
+              label: 'CST8250',
+              title: 'Database Design and Administration',
+              level: 2
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8253Sidebar',
+              label: 'CST8253',
+              title: 'Web Programming II',
+              level: 2
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8254Sidebar',
+              label: 'CST8254',
+              title: 'Network Operating Systems',
+              level: 2
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8256Sidebar',
+              label: 'CST8256',
+              title: 'Web Programming Languages I',
+              level: 3
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8257Sidebar',
+              label: 'CST8257',
+              title: 'Web Applications Development',
+              level: 3
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8259Sidebar',
+              label: 'CST8259',
+              title: 'Web Programming Languages II',
+              level: 4
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8260Sidebar',
+              label: 'CST8260',
+              title: 'Database System and Concepts',
+              level: 1
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8265Sidebar',
+              label: 'CST8265',
+              title: 'Web Security Basics',
+              level: 4
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8279Sidebar',
+              label: 'CST8279',
+              title: 'Introduction to Computer Programming using Python',
+              level: 1
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'cst8318Sidebar',
+              label: 'CST8318',
+              title: 'Graphics Technologies',
+              level: 2
+            },
+          ],
+        }
+      ]
     },
     footer: {
       style: 'dark',

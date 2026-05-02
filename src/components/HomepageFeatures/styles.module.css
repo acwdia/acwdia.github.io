@@ -1,5 +1,20 @@
 .courses {
-  padding: 5rem 0;
+  padding: 3rem 0 5rem;
+}
+
+.levelSection {
+  margin-bottom: 3.5rem;
+}
+
+.levelTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ifm-color-primary);
+  border-bottom: 2px solid var(--ifm-color-primary);
+  padding-bottom: 0.4rem;
+  margin-bottom: 2rem;
 }
 
 .courseGrid {
