@@ -21,7 +21,7 @@ fetch('https://jsonplaceholder.typicode.com/users/1')
       .then(json => document.write(JSON.stringify(json)))
 ```
 
-<iframe height="228" style="width: 100%;" scrolling="no" title="Fetch - Basic Request" src="https://codepen.io/IMD/embed/jOWqVNM?height=228&theme-id=47863&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<iframe height="228" style={{width: '100%'}} scrolling="no" title="Fetch - Basic Request" src="https://codepen.io/IMD/embed/jOWqVNM?height=228&theme-id=47863&default-tab=result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/IMD/pen/jOWqVNM'>Fetch - Basic Request</a> by IMD
   (<a href='https://codepen.io/IMD'>@IMD</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -38,7 +38,7 @@ An [`async`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/S
 })()
 ```
 
-<iframe height="220" style="width: 100%;" scrolling="no" title="Fetch with Async and Await" src="https://codepen.io/IMD/embed/ExgxKbm?height=220&theme-id=47863&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="220" style={{width: '100%'}} scrolling="no" title="Fetch with Async and Await" src="https://codepen.io/IMD/embed/ExgxKbm?height=220&theme-id=47863&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/IMD/pen/ExgxKbm'>Fetch with Async and Await</a> by IMD
   (<a href='https://codepen.io/IMD'>@IMD</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -99,7 +99,7 @@ Below is an example of a full POST request using Fetch with the request object.
 })()
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="POST Request with Fetch" src="https://codepen.io/IMD/embed/xxoVJgj?default-tab=html%2Cresult&theme-id=47863" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="POST Request with Fetch" src="https://codepen.io/IMD/embed/xxoVJgj?default-tab=html%2Cresult&theme-id=47863" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/xxoVJgj">
   POST Request with Fetch</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.

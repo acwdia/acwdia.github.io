@@ -1,7 +1,3 @@
----
-title: A Declarative Approach
----
-
 # A Declarative Approach
 
 Declarative programming has gained popularity in the JavaScript community in recent years, especially with the rise of JavaScript frameworks that take a declarative approach. But what is declarative programming and why would we want to take a declarative approach to writing our JavaScript?
@@ -160,7 +156,7 @@ function createElement (type, props, ...children) {
 const title = createElement('h1', { className: 'title' }, 'Hello World')
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="HTML Creation - Declarative Approach" src="https://codepen.io/IMD/embed/KKEdzqd?default-tab=html%2Cresult&theme-id=47863" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="HTML Creation - Declarative Approach" src="https://codepen.io/IMD/embed/KKEdzqd?default-tab=html%2Cresult&theme-id=47863" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/KKEdzqd">
   HTML Creation - Declarative Approach</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -210,7 +206,7 @@ const list = createElement(
 )
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="HTML Creation - Declarative Approach" src="https://codepen.io/IMD/embed/eYXpzNy?default-tab=result&theme-id=47863" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="HTML Creation - Declarative Approach" src="https://codepen.io/IMD/embed/eYXpzNy?default-tab=result&theme-id=47863" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/eYXpzNy">
   HTML Creation - Declarative Approach</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.

@@ -1,7 +1,3 @@
----
-title: Creating HTML using Methods
----
-
 # Creating HTML with Methods
 
 An alternative way to create HTML elements with JavaScript is to use the `createElement()` method. This is the preferred technique for creating HTML elements because it is more secure and typically has better performance. However, it is more complex and difficult to use for novice developers.
@@ -43,7 +39,7 @@ $item.textContent = 'Eggs'
 $list.append($item)
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Creating HTML using Strings - insertAdjacentHTML" src="https://codepen.io/IMD/embed/poqgbWZ?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="Creating HTML using Strings - insertAdjacentHTML" src="https://codepen.io/IMD/embed/poqgbWZ?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/poqgbWZ">
   Creating HTML using Strings - insertAdjacentHTML</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -82,7 +78,7 @@ $clone.textContent = 'Bread'
 $list.append($clone)
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Creating HTML using Methods - Cloning HTML Elements" src="https://codepen.io/IMD/embed/poqgbdZ?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="Creating HTML using Methods - Cloning HTML Elements" src="https://codepen.io/IMD/embed/poqgbdZ?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/poqgbdZ">
   Creating HTML using Methods - Cloning HTML Elements</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -142,7 +138,7 @@ for (const item of items) {
 $list.append($fragment)
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Creating HTML using Methods - Using DocumentFragments" src="https://codepen.io/IMD/embed/qBLbaGp?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="Creating HTML using Methods - Using DocumentFragments" src="https://codepen.io/IMD/embed/qBLbaGp?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/qBLbaGp">
   Creating HTML using Methods - Using DocumentFragments</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.
