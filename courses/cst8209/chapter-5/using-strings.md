@@ -1,7 +1,3 @@
----
-title: Creating HTML using Strings
----
-
 # Creating HTML Using Strings
 
 JavaScript allows developers to get and set HTML using strings that contain HTML. This is primarily accomplished using the `innerHTML` property. Using HTML strings can be a quick and effective way to create and insert HTML using JavaScript, but it does come with some drawbacks. 
@@ -37,7 +33,7 @@ Of course, the line above will replace any HTML that was inside the list. This c
 $list.innerHTML += '<li>Eggs</li>'
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Creating HTML using Strings - innerHTML" src="https://codepen.io/IMD/embed/NWeGQJK?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="Creating HTML using Strings - innerHTML" src="https://codepen.io/IMD/embed/NWeGQJK?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/NWeGQJK">
   Creating HTML using Strings - innerHTML</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -64,7 +60,7 @@ $list.innerHTML += `
   <li class="list-group-item">Sugar</li>`
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Creating HTML using Strings - Templates" src="https://codepen.io/IMD/embed/MWZaNdj?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="Creating HTML using Strings - Templates" src="https://codepen.io/IMD/embed/MWZaNdj?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/MWZaNdj">
   Creating HTML using Strings - Templates</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -103,7 +99,7 @@ for (const item of items) {
 }
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Creating HTML using Strings - Template Literals" src="https://codepen.io/IMD/embed/jOXWqXw?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="Creating HTML using Strings - Template Literals" src="https://codepen.io/IMD/embed/jOXWqXw?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/jOXWqXw">
   Creating HTML using Strings - Template Literals</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -127,7 +123,7 @@ for (const item of items) {
 $list.innerHTML += list.join('')
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Creating HTML using Strings - Too Many DOM Insertions" src="https://codepen.io/IMD/embed/xxmZObB?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="Creating HTML using Strings - Too Many DOM Insertions" src="https://codepen.io/IMD/embed/xxmZObB?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/xxmZObB">
   Creating HTML using Strings - Too Many DOM Insertions</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.
@@ -161,7 +157,7 @@ Using `insertAdjacentHTML()` method, it is possible to add a title before our li
 $list.insertAdjacentHTML('beforebegin', '<h2>Grocery List</h2>')
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Creating HTML using Strings - insertAdjacentHTML" src="https://codepen.io/IMD/embed/mdaVEVP?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="Creating HTML using Strings - insertAdjacentHTML" src="https://codepen.io/IMD/embed/mdaVEVP?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/mdaVEVP">
   Creating HTML using Strings - insertAdjacentHTML</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.

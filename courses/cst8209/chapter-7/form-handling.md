@@ -75,7 +75,7 @@ $form.addEventListener('submit', function (e) {
 })
 ```
 
-<iframe height="508" style="width: 100%;" scrolling="no" title="Form Handling - Getting Values" src="https://codepen.io/IMD/embed/eYzzQXr?height=508&theme-id=47863&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="508" style={{width: '100%'}} scrolling="no" title="Form Handling - Getting Values" src="https://codepen.io/IMD/embed/eYzzQXr?height=508&theme-id=47863&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/IMD/pen/eYzzQXr'>Form Handling - Getting Values</a> by IMD
   (<a href='https://codepen.io/IMD'>@IMD</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
@@ -113,7 +113,7 @@ const $form = document.getElementById('form')
 $form.elements['color'].value // red
 ```
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="Form Handling - RadioNodeList" src="https://codepen.io/IMD/embed/yLJaegE?height=265&theme-id=47863&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="265" style={{width: '100%'}} scrolling="no" title="Form Handling - RadioNodeList" src="https://codepen.io/IMD/embed/yLJaegE?height=265&theme-id=47863&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/IMD/pen/yLJaegE'>Form Handling - RadioNodeList</a> by IMD
   (<a href='https://codepen.io/IMD'>@IMD</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>

@@ -58,7 +58,7 @@ $list.addEventListener('click', function (e) {
 
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Event Delegation" src="https://codepen.io/IMD/embed/KKPxZqa?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="Event Delegation" src="https://codepen.io/IMD/embed/KKPxZqa?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/KKPxZqa">
   Event Delegation</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.

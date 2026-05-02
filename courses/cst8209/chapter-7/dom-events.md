@@ -62,7 +62,7 @@ function handleButtonClick () {
 $button.addEventListener('click', handleButtonClick)
 ```
 
-<iframe height="300" style="width: 100%;" scrolling="no" title="Event Listeners" src="https://codepen.io/IMD/embed/poqgOBJ?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="Event Listeners" src="https://codepen.io/IMD/embed/poqgOBJ?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/IMD/pen/poqgOBJ">
   Event Listeners</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
   on <a href="https://codepen.io">CodePen</a>.
