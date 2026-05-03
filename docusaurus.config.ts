@@ -92,6 +92,12 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      }
+    },
     navbar: {
       title: 'AC WDIA',
       logo: {
