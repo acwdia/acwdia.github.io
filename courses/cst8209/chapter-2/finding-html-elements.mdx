@@ -1,17 +1,11 @@
----
-title: Finding HTML Elements
----
+import Youtube from '@site/src/components/Youtube';
+import Codepen from '@site/src/components/Codepen';
 
 # Finding HTML Elements
 
-<div className="video">
-  <div className="video-container">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/DO02UZaedIo?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-  <p>
-    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
-  </p>
-</div> 
+<Youtube src="https://www.youtube.com/embed/DO02UZaedIo?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube>
 
 ## getElementById()
 
@@ -33,10 +27,10 @@ const $box = document.getElementById('box')
 $box.textContent = 'I am a box.'
 ```
 
-<iframe height="265" style={{width: '100%'}} scrolling="no" title="Finding HTML Elements - getElementById" src="//codepen.io/IMD/embed/jONWxoL/?height=265&theme-id=47863&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+<Codepen height="265" scrolling="no" title="Finding HTML Elements - getElementById" src="//codepen.io/IMD/embed/jONWxoL/?height=265&theme-id=47863&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/IMD/pen/jONWxoL/'>Finding HTML Elements - getElementById</a> by IMD
   (<a href='https://codepen.io/IMD'>@IMD</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+</Codepen>
 
 > #### NOTE
 > The [`innerText`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText) property also allows access to get and set the text of the element. However, there several [difference between how to the two properties work](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent#differences_from_innertext). 
