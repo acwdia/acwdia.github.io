@@ -2,6 +2,8 @@
 title: Creating New Strings
 ---
 
+import Youtube from '@site/src/components/Youtube';
+
 # Creating New Strings
 
 Most string methods in JavaScript create and return new strings, instead of altering the original. However, the following methods are used to modify the characters of the original strings to create a whole new string. 
@@ -31,14 +33,9 @@ console.log(chant.repeat(3)) // 'I think I can. I think I can. I think I can.'
 
 ## replace()
 
-<div class="video">
-  <div class="video-container">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/mcCn1NAu22k?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-  <p>
-    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
-  </p>
-</div> 
+<Youtube src="https://www.youtube.com/embed/mcCn1NAu22k?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
 
 The [`replace()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) method returns a new string with some or all matches of a `pattern` replaced by a `replacement`. 
 
@@ -59,14 +56,9 @@ console.log(title.replace(/\s/g, '-').toLowerCase()) // 'the-little-engine-that-
 
 ## trim()
 
-<div class="video">
-  <div class="video-container">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/ZE1hi41_ZzE?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-  <p>
-    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
-  </p>
-</div> 
+<Youtube src="https://www.youtube.com/embed/ZE1hi41_ZzE?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
 
 The [`trim()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim) method removes whitespace from the beginning and the end of a string. In this context, whitespace refers to all the whitespace characters including spaces, tabs and returns.  
 

@@ -2,16 +2,13 @@
 title: HTML Semantic Elements
 ---
 
+import Youtube from '@site/src/components/Youtube';
+
 # HTML Semantic Elements
 
-<div className="video">
-  <div className="video-container">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/kGW8Al_cga4?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-  <p>
-    <small> This YouTube video was created by <a href="https://www.youtube.com/@NetNinja">Net Ninja</a>. </small>
-  </p>
-</div> 
+<Youtube src="https://www.youtube.com/embed/kGW8Al_cga4?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/@NetNinja">Net Ninja</a>.</small>
+</Youtube> 
 
 
 There are a variety of elements in HTML that are used for providing structure to the content. The [semantics and hierarchical structure](http://html5doctor.com/lets-talk-about-semantics/) of the HTML document are important for a variety of reasons including:

@@ -1,3 +1,5 @@
+import Youtube from '@site/src/components/Youtube';
+
 # DOM Events
 
 [DOM Events](https://developer.mozilla.org/en-US/docs/Web/Events) are notifications that some action has occurred on the page and can represent a basic user action or the status of the render model. For example, when a user clicks on a button, that is a DOM Event. When the page loads, that is a DOM Event. When the page is scrolled, the window is resized, or the mouse is moved are all DOM Events. There are DOM Events for the keyboard, mouse, touch, clipboard, media, view, printing, drag & drop, animation, forms, and more. 
@@ -22,14 +24,9 @@ $button.onclick = function () {
 
 ## Using event listeners
 
-<div class="video">
-  <div class="video-container">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/EaRrmOtPYTM?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-  <p>
-    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
-  </p>
-</div> 
+<Youtube src="https://www.youtube.com/embed/EaRrmOtPYTM?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
 
 The second approach is to [use event listeners](https://developer.mozilla.org/en-US/docs/Web/Events/Event_handlers#eventtarget.addeventlistener), which are the most flexible and preferred way for event handling. Event Listeners are JavaScript objects that listen for a specific DOM Event to occur and execute a function when it does. Event Listeners can be created by using the [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) method to a target element. The `addEventListener()` method takes two arguments, the event type and a function that will execute when the event occurs. 
 

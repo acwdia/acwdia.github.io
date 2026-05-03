@@ -2,16 +2,13 @@
 title: The Document Object Model
 ---
 
+import Youtube from '@site/src/components/Youtube';
+
 # The Document Object Model
 
-<div className="video">
-  <div className="video-container">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/O6BNfJz3rgs?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-  <p>
-    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
-  </p>
-</div> 
+<Youtube src="https://www.youtube.com/embed/O6BNfJz3rgs?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
 
 HTML and JavaScript are very different languages. One is a declarative markup language and the other object-oriented scripting language. Yet the two languages work together, thanks in large part to the Document Object model.
 

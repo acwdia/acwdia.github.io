@@ -2,16 +2,13 @@
 title: Web Storage
 ---
 
+import Youtube from '@site/src/components/Youtube';
+
 # Web Storage
 
-<div class="video">
-  <div class="video-container">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/hOCYNdgsUfs?rel=0&amp;controls=1&amp;modestbranding=1&amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-  <p>
-    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
-  </p>
-</div> 
+<Youtube src="https://www.youtube.com/embed/hOCYNdgsUfs?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
 
 Web storage is a more modern approach to client-side storage, introduced with HTML5. Unlike cookies, web storage does not automatically send data to the server with each request. However, it has a much larger storage capacity than cookies, between 5 and 10MB. It provides two different storage mechanisms: **local storage** and **session storage**. 
 

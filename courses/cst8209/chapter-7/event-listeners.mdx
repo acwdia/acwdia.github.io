@@ -1,13 +1,10 @@
+import Youtube from '@site/src/components/Youtube';
+
 # Event Listeners
 
-<div class="video">
-  <div class="video-container">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/EaRrmOtPYTM?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-  <p>
-    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
-  </p>
-</div> 
+<Youtube src="https://www.youtube.com/embed/EaRrmOtPYTM?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
 
 Event Listeners are JavaScript objects that listen for a specific DOM Event to occur and execute a function when it does. Event Listeners can be created by using the [`addEventListener()`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) method to a target element. The `addEventListener()` method takes two arguments, the event type and a function that will execute when the event occurs. 
 

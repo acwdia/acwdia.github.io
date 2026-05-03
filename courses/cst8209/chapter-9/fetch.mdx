@@ -1,13 +1,10 @@
+import Youtube from '@site/src/components/Youtube';
+
 # Fetch
 
-<div class="video">
-  <div class="video-container">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/FmpMIaukgfA?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-  <p>
-    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
-  </p>
-</div> 
+<Youtube src="https://www.youtube.com/embed/FmpMIaukgfA?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
 
 
 The [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) is a replacement for the older [XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest) and can be used to make Ajax requests. With a fetch request, the Fetch API will return a response in the form of a JavaScript [Promise](https://developer.mozilla.org/en-US/docs/Web/API/Promise).

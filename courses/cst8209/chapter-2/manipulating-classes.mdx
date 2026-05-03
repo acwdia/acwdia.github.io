@@ -2,16 +2,13 @@
 title: Manipulating CSS Classes
 ---
 
+import Youtube from '@site/src/components/Youtube';
+
 # Manipulating CSS Classes
 
-<div className="video">
-  <div className="video-container">
-    <iframe width="640" height="360" src="https://www.youtube.com/embed/h1_BBMGJjUA?rel=0&amp;amp;controls=1&amp;amp;modestbranding=1&amp;amp;start=undefined" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-  </div>
-  <p>
-    <small> This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>. </small>
-  </p>
-</div> 
+<Youtube src="https://www.youtube.com/embed/h1_BBMGJjUA?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
 
 CSS classes are the most common and preferred way to style your website or web application. It provides a way to reuse CSS definitions across many HTML elements. One of the most common changes made to an HTML Element by JavaScript is adding, removing and toggling classes. Therefore, JavaScript includes properties for class manipulation.
 
