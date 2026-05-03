@@ -13,8 +13,10 @@
   --ifm-color-primary-light: #33925d;
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-content: var(--ifm-color-emphasis-800);
   --ifm-code-font-size: 95%;
-  --ifm-menu-color: var(--ifm-color-emphasis-800);
+  --ifm-heading-font-weight: 400;
+  --ifm-menu-color: var(--ifm-color-emphasis-900);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
@@ -27,7 +29,6 @@
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
-  --ifm-menu-color: var(--ifm-color-emphasis-900);
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -102,3 +103,15 @@ mark {
 [data-theme='dark'] .searchResultItem:focus-within {
   background-color: rgba(37, 194, 160, 0.12);
 }
+
+/* ── Markdown Custom Styles ───────────────────────── */
+
+.theme-doc-markdown.markdown h1 {
+  font-weight: 400;
+}
+
+.theme-doc-markdown.markdown p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
