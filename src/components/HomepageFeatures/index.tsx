@@ -2,7 +2,7 @@ import type {ReactNode} from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 const COVER_COLORS = [
   {bg: '#1a5276', spine: '#154360'},

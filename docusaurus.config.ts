@@ -35,6 +35,8 @@ const config: Config = {
     locales: ['en'],
   },
 
+  plugins: ['docusaurus-plugin-sass'],
+
   themes: [
     [
       '@easyops-cn/docusaurus-search-local',
@@ -59,6 +61,7 @@ const config: Config = {
           path: 'courses',
           routeBasePath: 'courses',
           sidebarPath: './sidebars.ts',
+          breadcrumbs: false,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -80,7 +83,7 @@ const config: Config = {
         //   onUntruncatedBlogPosts: 'warn',
         // },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/custom.scss',
         },
       } satisfies Preset.Options,
     ],
@@ -90,6 +93,12 @@ const config: Config = {
     // Replace with your project's social card
     colorMode: {
       respectPrefersColorScheme: true,
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+        autoCollapseCategories: true,
+      }
     },
     navbar: {
       title: 'AC WDIA',

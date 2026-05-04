@@ -1,0 +1,42 @@
+---
+title: The for...in Loop
+---
+
+import Youtube from '@site/src/components/Youtube';
+
+# for...in
+
+<Youtube src="https://www.youtube.com/embed/prl73KRkB34?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
+
+The [`for...in` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) iterates over the properties of an object. 
+
+The expression of the `for...in` loop starts with an initialization of the variable used to hold the key of each property. This is followed by the keyword `in` and ends with the object. 
+
+To retrieve each property's value, bracket notation **MUST** be used with the object's variable and the current key. If dot notation is used, it will likely return `undefined`.
+
+```js
+for (const key in object) {
+  console.log(object[key]) // retrieve the value  
+  console.log(object.key)  // undefined
+}
+```
+
+```js
+const sounds = {
+  cow: 'moo',
+  duck: 'quack',
+  horse: 'nay'
+}
+
+for (const animal in sounds) {
+  // Logs each animals' sound
+  console.log(sounds[animal])
+}
+```
+
+> #### NOTE
+> While it is possible to use the `for...in` statement with arrays, it is not recommended. It is better to use the `for...of` statement with arrays.
+
+

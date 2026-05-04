@@ -1,0 +1,182 @@
+---
+title: Objects
+---
+
+import Youtube from '@site/src/components/Youtube';
+
+# Objects
+
+<Youtube src="https://www.youtube.com/embed/kZjJqm_VIGQ?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
+
+Objects are perhaps the most important component inside JavaScript. Remember that any value that is not a primitive data type is an object. Furthermore, JavaScript allows us to create custom objects known as `object literals`.  
+
+## Creating Object Literals
+[`Object literals`](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics) give us the ability to group things more descriptively, by creating key/value pairs, known as properties. 
+
+They are created by using a set of curly braces (`{}`). Inside the curly braces is a comma-separated list of properties. Each property is made up of a key and a value separated by a colon (`:`).
+
+
+```js
+// An object with no properties
+const empty = {}
+
+// An object with properties 
+const car = { 
+  year: 2019,
+  make: 'Toyota',
+  model: 'Prius'
+}
+```
+
+## Retrieving Object Properties
+Every property in an object acts as a variable or container, with the key serving as an identifier. So, it is possible to retrieve a property's value through the use of the property's key. 
+
+There are two methods for retrieving a property's value, [`dot notation`](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics#Dot_notation) and [`bracket notation`](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics#Bracket_notation). 
+
+
+```js
+const car = { 
+  year: 2019,
+  make: 'Toyota',
+  model: 'Prius'
+}
+ 
+// dot notation
+console.log(car.make) // 'Toyota'
+
+// bracket notation
+console.log(car['model']) // 'Prius'
+```
+
+> #### NOTE
+> When using **bracket notation** the key name must be in quotes, while when using **dot notation** the key name should not.
+
+Like arrays, objects can also include arrays and other objects. Such objects are often referred to as multidimensional objects. When this occurs an extra set of notation is required to retrieve these nested values.
+
+> #### NOTE
+> Just like stand-alone arrays, when working with arrays inside objects, you can only use `bracket notation` on the array. However is possible to mix the notations in the statement. 
+
+```js
+const car = { 
+  year: 2019,
+  make: 'Toyota',
+  model: 'Prius',
+  features: [
+    'Hybrid',
+    'Remote Keyless Entry', 
+    'Anti-Lock Brakes', 
+    'Stability Control',
+    'GPS Navigation'
+  ]
+}
+
+// dot notation
+console.log(car.features[1]) // 'Remote Keyless Entry'
+
+// bracket notation
+console.log(car['features'][2]) // 'Anti-lock Brakes'
+```
+
+## Updating Object Properties
+
+Just like with variables, it is also possible to update the values of an object's property using the equal sign (`=`). Both `dot notation` and `bracket notation` can be used when updating property values.
+
+```js
+const car = { 
+  year: 2019,
+  make: 'Toyota',
+  model: 'Prius',
+  features: [
+    'Hybrid',
+    'Remote Keyless Entry', 
+    'Anti-Lock Brakes', 
+    'Stability Control',
+    'GPS Navigation'
+  ]
+}
+
+// dot notation
+car.make = 'Tesla'
+
+// bracket notation
+car['model'] = 'Model 3'
+
+// nested property
+car.features[0] = 'Electric'
+```
+
+## Adding Object Properties
+
+Adding new properties to an object is remarkably similar to updating properties. The same syntax is used, except that instead of using an existing property key a new property key is used.
+
+```js
+const car = { 
+  year: 2019,
+  make: 'Tesla',
+  model: 'Model 3',
+  features: [
+    'Electric',
+    'Remote Keyless Entry', 
+    'Anti-Lock Brakes', 
+    'Stability Control',
+    'GPS Navigation'
+  ]
+}
+
+// dot notation
+car.color = 'Red'
+
+// bracket notation
+car['range'] = 500
+```
+
+## Removing Object Properties
+
+To remove a property from an object, use the [`delete`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete) operator followed by the desired property to remove. 
+
+```js
+const car = { 
+  year: 2019,
+  make: 'Tesla',
+  model: 'Model 3',
+  features: [
+    'Electric',
+    'Remote Keyless Entry', 
+    'Anti-Lock Brakes', 
+    'Stability Control',
+    'GPS Navigation'
+  ],
+  color: 'Red',
+  range: 500
+}
+
+// dot notation
+delete car.range
+
+// bracket notation
+delete car['features']
+```
+
+## Defining Object Methods
+
+In addition to storing data, objects can also contain entire methods. These methods are commonly used to process data stored in the object's properties.
+
+```js
+const object = {
+  value: 42,
+  greet: function() {
+    console.log('Hello!')
+  },
+  displayValue: function() {
+    console.log(this.value)
+  }
+}
+
+object.greet()
+object.displayValue()
+```
+
+> #### NOTE
+> To access the property `value`, a special keyword `this` must be used to dictate that we expect to find the variable as a property of the "owner" of the method.

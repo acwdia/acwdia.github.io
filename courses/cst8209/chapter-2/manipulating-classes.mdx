@@ -1,0 +1,113 @@
+---
+title: Manipulating CSS Classes
+---
+
+import Youtube from '@site/src/components/Youtube';
+
+# Manipulating CSS Classes
+
+<Youtube src="https://www.youtube.com/embed/h1_BBMGJjUA?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
+
+CSS classes are the most common and preferred way to style your website or web application. It provides a way to reuse CSS definitions across many HTML elements. One of the most common changes made to an HTML Element by JavaScript is adding, removing and toggling classes. Therefore, JavaScript includes properties for class manipulation.
+
+
+## Retrieving Classes
+
+The [`className`](https://developer.mozilla.org/en-US/docs/Web/API/Element/className) property is used to get and set the value of the `class` attribute of an HTML element. 
+
+Imagine we have the following HTML
+
+```html
+<a id="link" href="https://facebook.com" className="btn"></a>
+```
+
+The value of the `class` attribute could be retrieved like this: 
+
+```js
+const $link = document.getElementById('link')
+console.log($link.className) // 'btn'
+```
+
+The `class` attribute could also be updated by using the same `className` property.
+
+```js
+$link.className = 'btn-primary'
+console.log($link.className) // 'btn-primary'
+```
+
+> #### NOTE
+> When using className to update the `class` attribute, all original classes will be replaced. If the some or all of the original classes need to kept, it is better to used the `classList` property.  
+
+## Adding Classes
+
+The [`classList`](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) contains a collection of methods for adding and removing classes of an HTML element. It is a convenient alternative to `className`.
+
+To add a class to an HTML Element, we can use the `classList.add()` method. It is possible to add more than one class at a time by separating them by a comma.
+
+```html
+<a id="link" href="https://facebook.com"></a>
+```
+
+```js
+const $link = document.getElementById('link')
+$link.classList.add('btn', 'btn-primary')
+```
+
+<iframe height="265" style={{width: '100%'}} scrolling="no" title="HTML Element - Adding Classes" src="//codepen.io/IMD/embed/xBKWaG/?height=265&theme-id=47863&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/IMD/pen/xBKWaG/'>HTML Element - Adding Classes</a> by IMD
+  (<a href='https://codepen.io/IMD'>@IMD</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
+
+## Replacing Classes
+
+To replace a class with another class, we can use the `classList.replace()` method. 
+
+```html
+<a id="link" href="https://facebook.com" className="btn btn-primary">Facebook</a>
+```
+
+```js
+const $link = document.getElementById('link')
+$link.classList.replace('btn-primary', 'btn-success')
+```
+
+<iframe height="300" style={{width: '100%'}} scrolling="no" title="HTML Element - Replacing Classes" src="https://codepen.io/IMD/embed/OJryZMo?default-tab=js%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href="https://codepen.io/IMD/pen/OJryZMo">
+  HTML Element - Replacing Classes</a> by IMD (<a href="https://codepen.io/IMD">@IMD</a>)
+  on <a href="https://codepen.io">CodePen</a>.
+</iframe>
+
+
+## Removing Classes
+
+To remove a class from an HTML Element, we can use the `classList.remove()` function. It is possible to remove more than one class at a time by separating them by a comma.
+
+```js
+$link.classList.remove('btn', 'btn-primary')
+```
+
+## Toggling Classes
+
+To remove a class from an HTML Element if it is present or to add a class if it is not, we can use the `classList.toggle()` function. It is **NOT** possible to toggle more than one class with a single function call.
+
+```js
+$link.classList.toggle('active')
+```
+
+## Checking for Classes
+
+Sometimes it is necessary to check if an element contains a specific class. We can use the `classList.contains()` function to check for a specified class exists. A boolean will be returned.
+
+```HTML
+<a id="link" href="https://facebook.com" className="btn btn-primary">Facebook</a>
+```
+
+```js
+const $link = document.getElementById('link')
+console.log($link.classList.contains('btn')) // true
+console.log($link.classList.contains('active')) // false
+```
+
+

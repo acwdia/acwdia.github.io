@@ -1,0 +1,99 @@
+import Scrimba from '@site/src/components/Scrimba';
+
+# Array Sorting
+
+<Scrimba src="https://v2.scrimba.com/s0tao1" />
+
+JavaScript includes two convenient methods for rearranging items inside an array, the `sort()` method and the `reverse()` method. 
+
+> #### NOTE
+> These methods will alter the original array. 
+
+## The sort() Method
+The [`sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) method sorts the items of an array, affecting the original array, and returns the sorted array. The default sort order for the `sort()` method converts all items to strings and then compares their UTF-16 code unit values. 
+
+For example, if you sorted an array of numbers using the `sort()` method, you may get unexpected results: 
+
+```js
+const numbers = [1, 20, 4, 100]
+
+numbers.sort()
+
+console.log(numbers) // [1, 100, 20, 4]
+```
+
+> #### NOTE
+> By default, the `sort()` method will **NOT** sort numbers numerically, as all numbers will be converted to strings.
+
+It is possible to alter the sort order of the `sort()` method by adding a compare function. This can make it possible to over the limitations of the default sort order.
+
+```js
+const numbers = [1, 20, 4, 100]
+
+// Adding a compare function to compare numbers
+numbers.sort(function (a, b) {
+  return a - b
+})
+
+console.log(numbers) // [1, 4, 20, 100]
+```
+
+Another common mistake with the `sort()` method is attempting to alphabetize an array of strings with different casing. 
+
+```js
+const primary = ['red', 'yellow', 'blue']
+primary.sort() 
+console.log(primary)// ['blue', 'red', 'yellow']
+
+// Note the uppercase 'P' in 'Purple'
+const secondary = ['orange', 'Purple', 'green']
+secondary.sort()
+console.log(secondary) // ['Purple', 'green', 'orange']
+```
+
+> #### NOTE
+> By default, the `sort()` method will **NOT** always sort alphabetically, as uppercase and lowercase letters will have different UTF-16 values.
+
+This again can be overcome by using a compare function. 
+
+```js
+const secondary = ['orange', 'Purple', 'green']
+secondary.sort(function (a, b) {
+  if (a.toLowerCase() < b.toLowerCase()) {
+    return -1
+  } else if (a.toLowerCase() > b.toLowerCase()) {
+    return 1
+  } else {
+    return 0
+  }
+})
+console.log(secondary) // ['green', 'orange', 'Purple']
+```
+
+> #### NOTE
+> The [`toSort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted) method is a copying version of the `sort()` method. It returns a new array and does not affect the original.
+
+## The reverse() Method
+
+The [`reverse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse) method reverses an array, affecting the original array, and returns the reversed array. 
+
+```js
+const colors = ['red', 'yellow', 'orange', 'purple', 'blue']
+colors.reverse() 
+console.log(colors)// ['blue', 'purple', 'orange', 'yellow', 'red']
+```
+
+In JavaScript, it is possible to chain methods together, like `sort()` and `reverse()` to get a "reverse alphabetically" order. 
+
+```js
+const colors = ['red', 'yellow', 'orange', 'purple', 'blue']
+colors.sort().reverse() 
+console.log(colors) // ['yellow', 'red', 'purple', 'orange', 'blue']
+```
+
+> #### NOTE
+> The [`toReversed()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed) method is a copying version of the `reverse()` method. It returns a new array and does not affect the original.
+
+## See Also
+
+- [Manipulating and Sorting Arrays in JavaScript](https://www.youtube.com/watch?v=C3EPTuXKRw0)

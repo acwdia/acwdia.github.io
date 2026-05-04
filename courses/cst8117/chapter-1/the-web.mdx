@@ -1,0 +1,70 @@
+---
+title: Introduction to the Web
+---
+
+import Youtube from '@site/src/components/Youtube';
+
+# Introduction to the Web
+
+For more the 30 years the web has had a profound effect on the world. It has changed the way we work, learn, communicate, shop, and live. Without the Web, much of what we do today would not be possible. But what exactly is the web and how does it work?
+
+## History of the Web
+
+<Youtube src="https://www.youtube.com/embed/sSqZ_hJu9zA?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/@CERN">CERN</a>.</small>
+</Youtube> 
+
+The World Wide Web, or the Web for short, was invited by Tim Berners-Lee in 1989 while working at CERN. He saw "a need for a collaborative knowledge-sharing tool" and proposed a "universal linked information system". Tim Berners-Lee went on to develop the first web server, the first web browser, and a document formatting protocol, called Hypertext Markup Language (HTML). His creation was made public in 1993 and the web has grown under the guidance of the [World Wide Web Consortium (W3C)](https://www.w3.org)
+
+## The Internet vs. the Web
+
+<Youtube src="https://www.youtube.com/embed/laepk9KrAZY?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/@techquickie">Techquickie</a>.</small>
+</Youtube> 
+
+The Internet is a network of computers communicating and working together with origins that date back to the 1960s. On the other hand, the Web refers to the use of HTTP (Hyper Text Transport Protocol) and HTML (Hyper Text Markup Language) is but one use of the Internet. 
+
+## How Does the Web Work
+
+<Youtube src="https://www.youtube.com/embed/hJHvdBlSxug?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/@academind">Academind</a>.</small>
+</Youtube> 
+
+The Web involves several key components and technologies that work together to make web browsing and communication possible. 
+
+### Client and Server Model
+
+The client-server model is a design pattern or architecture that constrains system/solution activities between two parties; a client and a server. The concept of client-server is based on a request-response relationship but isn’t always representative of a physical machine, location or person.
+
+Where a client makes a request for a resource from a server, the server responds to the client with the requested resource or a reason that it's unavailable.
+
+We tend to consider browsers, phones and laptops as straight-up clients. They send requests out to the internet somewhere and then process the response. For the most, this is generally true but there are scenarios, especially on the [back end](https://en.wikipedia.org/wiki/Front_and_back_ends) where a server in one relationship can be a client in another.
+
+![Client-server Model](https://imdac.github.io/images/client-server-model.png)
+
+
+### Uniform Resource Locator
+
+A Uniform Resource Locator (URL) is used to access a website or a specific web resource, users enter a URL into their web browser's address bar. A URL typically consists of the following components including the protocol, the domain name, the port, and the path.
+
+### Domain Name System
+When a user enters a URL, the browser needs to resolve the domain name (e.g., www.example.com) into an IP address because computers communicate over IP addresses. This translation is performed by DNS servers.
+
+### Hypertext Transport Protocol
+The [Hypertext Transport Protocol](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview) (HTTP) provides a standardized framework to enable the ‘fetching’ of documents and other resources and is the basis for exchanging data on the internet.
+
+[HTTP messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#HTTP_Messages) in the form of either an HTTP request or response are sent back and forth between the client and server. HTTP messages are usually comprised of two parts, a header and a body or, payload. The header contains message metadata and the body carries the cargo.
+
+Thousands of HTTP messages can be sent and received before a requested resource is transmitted.
+
+## Browsers and User Agents
+
+<Youtube src="https://www.youtube.com/embed/QzohDuGk4mM?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/@gotreehouse">Treehouse</a>.</small>
+</Youtube>
+
+A **browser** is a software application or program that allows users to access and interact with information on the World Wide Web (WWW). Browsers act as intermediaries between users and web servers, interpreting and displaying web content such as text, images, videos, and interactive elements like forms and buttons. Some of the most popular web browsers include Google Chrome, Mozilla Firefox, Microsoft Edge, Apple Safari, and Opera.
+
+A **User-Agent** is a piece of information that a web browser or other client software sends to a web server when making an HTTP request. It is included in the HTTP headers of the request and typically identifies the type and version of the client software. The User-Agent string provides the server with information about the client's capabilities and characteristics, allowing the server to tailor its response accordingly.
+
+Web servers can use the User-Agent information to deliver content optimized for the specific browser or device, making sure that web pages are displayed correctly and that features are compatible with the client's capabilities. However, it's worth noting that some users or automated systems may modify or falsify their User-Agent strings for various reasons, including privacy and security concerns.

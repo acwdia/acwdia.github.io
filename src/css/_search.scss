@@ -1,0 +1,44 @@
+/* ── Search (docusaurus-search-local) ───────────────────────── */
+
+/* Search input in navbar */
+.navbar__search-input {
+  background-color: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  color: var(--ifm-font-color-base);
+}
+
+[data-theme='dark'] .navbar__search-input {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Search results dropdown */
+.searchResultsWrapper {
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Highlighted match text */
+mark {
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+[data-theme='dark'] mark {
+  background-color: #1a5276;
+  color: #aed6f1;
+}
+
+/* Active/hovered search result row */
+.searchResultItem:hover,
+.searchResultItem:focus-within {
+  background-color: rgba(46, 133, 85, 0.08);
+}
+
+[data-theme='dark'] .searchResultItem:hover,
+[data-theme='dark'] .searchResultItem:focus-within {
+  background-color: rgba(37, 194, 160, 0.12);
+}

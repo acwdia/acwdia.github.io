@@ -1,0 +1,190 @@
+---
+title: Functions
+---
+
+import Youtube from '@site/src/components/Youtube';
+
+# Functions
+
+A [function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions) is a predefined block of code that can be executed sometime in the future as many times as desired. Functions are essential to programming, and a core component to creating reusable code. Functions are a very powerful way to speed up, organize and improve control workflow.  
+
+## Function Declaration
+Defining a custom function can be accomplished in a few different ways, but the most common method is the [function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function). 
+
+The function declaration defines a function by starting with the `function` keyword followed by the *name* of the function, a set of parentheses (`()`) and a set of curly braces (`{}`). The block of code to be executed, also known as the 'body' of the function, goes between the curly braces. 
+
+```js
+// defining the add function
+function add () {
+  console.log('add')
+}
+```
+
+The body of a function will not execute until the function is invoked. Invocation will occur with the function's *name* is called with a set of parentheses. 
+
+```js
+// defining the add function
+function add () {
+  console.log('add')
+}
+
+// invoking the add function
+add() // 'add'
+```
+
+## The return Statement
+
+The [`return` statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return) is used to end a function's execution and specify the value to be returned. By default, if no `return` statement is used, a function will return `undefined`. 
+
+```js
+// defining the add function
+function add () {
+  return 'add'
+}
+
+// invoking the add function
+console.log(add()) // 'add'
+```
+
+## Function Parameters
+
+A function parameter is like a variable that can accept a value during invocation. Parameters are declared when the function is defined and can be used anywhere inside the function body. A function can have multiple parameters.
+
+When we call a function, we can pass values into it as a comma-separated list inside the parentheses. These values are called arguments.
+
+```js
+// defining the add function with parameters
+function add (a, b) {
+  return a + b
+}
+// invoking the add function and passing arguments
+console.log(add(3, 5)) // 8
+```
+
+## Function Scope
+
+Function Scope is the concept that variables declared inside of a function are **ONLY** accessible to that function. This is in contrast to variables declared outside of the function or block which are accessible from inside the function.
+
+```js
+const max = 10 // has global scope
+
+// defining the addToRandom function
+function addToRandom (num) {
+  // the variable max can be used inside the function
+  const random = Math.floor(Math.random() * max) // has function scope
+  return num + random 
+}
+
+console.log(addToRandom(1)) // a number between 1 and 10
+// the variable random does not exist outside the function
+console.log(typeof random) // undefined
+```
+
+## Anonymous Functions
+
+Sometimes functions are passed as arguments to other function calls. This can either be done anonymously...
+
+```js
+//Standard anonymous function syntax
+document.addEventListener('DOMContentLoaded', function (event) {
+    console.log('The document is ready!')
+})
+```
+
+...or by using a predefined function.
+
+```js
+function response(event) {
+    console.log('The document is ready!')
+}
+
+//Using a predefined function
+document.addEventListener('DOMContentLoaded', response)
+```
+
+Notice that when passing the predefined function as an argument, the parentheses are omitted. This is to prevent the function from being called when the JavaScript runtime first encounters the line of code.
+
+
+## Function Hoisting
+
+Function Hoisting is a behavior of the JavaScript interpreter to *hoist* a function to the top of the current scope. The result of this action means that it is technically possible to invoke a function before it is defined.
+
+For example, take the following code:
+
+```js
+console.log(add(3, 5))
+
+// the function is defined after it is called
+function add (a, b) {
+  return a + b
+}
+```
+
+This code causes no error, and the add function will be invoked and return the result. This is because the interpreter will see the code like this.
+
+```js
+// the function is hoisted to the top
+function add (a, b) {
+  return a + b
+}
+
+console.log(add(3, 5))
+```
+
+However, there are some important facts to understand about function hoisting. First, it only works with function declarations. Other forms of defining functions, like function expressions and arrow functions, are not hoisted in the same manner. Second, it is strongly discouraged and considered a bad practice to invoke a function before it is defined. 
+
+## Function Expressions
+
+The [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function) is an alternative way of defining a function. With the function expression, a variable is set to an anonymous `function`. 
+
+```js
+// function declaration
+function greeting (name) {
+  return `Hello, ${name}`
+}
+
+// function expression
+const greeting = function (name) {
+  return `Hello, ${name}`
+}
+```
+
+> #### NOTE
+> One difference between function declarations and function expressions is that function expressions are not hoisted. 
+
+## Arrow Functions
+
+<Youtube src="https://www.youtube.com/embed/2v4bulVra-w?rel=0&controls=1&modestbranding=1">
+  <small>This YouTube video was created by <a href="https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ">Steve Griffith</a>.</small>
+</Youtube> 
+
+The **[arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)** is a compact version of the standard function expression, which makes it desirable when passing anonymous functions to methods. 
+
+The arrow function does not require the `function` keyword and, in most cases, can also forgo the curly braces and the return statement. 
+
+```js
+// standard function expression
+const greeting = function (name) {
+  return `Hello, ${name}`
+}
+
+// arrow function expression
+const greet = name => `Hello, ${name}`
+
+console.log(greeting('Joe')) // "Hello, Joe"
+console.log(greet('Jack'))   // "Hello, Jack"
+```
+
+Because of the shorter syntax, arrow functions are preferred when passing functions as an argument. 
+
+```js
+function add (...numbers) {
+  return numbers.reduce((total, number) => total += number)
+}
+
+console.log(add(4, 8, 3, 5, 2)) // 22
+```
+
+## See Also
+
+- [Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
